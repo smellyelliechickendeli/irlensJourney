@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Entries from Irlen's log.">
+        <title>irlen's log</title>
+        <link href="main-look.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="open navigation">menu</button>
+        <header>
+            <h1>irlen's log</h1>
+            <nav class="site-nav" id="site-navigation" aria-label="Main navigation" hidden>
+                <a href="index.html" aria-current="page">entries</a>
+                <a href="about.html">about me</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="entry-toggle-row">
+                <button id="entry-toggle" type="button" aria-expanded="false" aria-controls="entry-editor">write an entry</button>
+            </div>
+            <section class="entry-editor" id="entry-editor" aria-labelledby="editor-heading" hidden>
+                <h2 id="editor-heading">write an entry</h2>
+                <form id="entry-form">
+                    <input id="entry-id" name="entry-id" type="hidden">
+                    <label for="entry-title">title (optional)</label>
+                    <input id="entry-title" name="title" type="text" maxlength="120">
+                    <label for="entry-content">your entry</label>
+                    <textarea id="entry-content" name="content" rows="6" required></textarea>
+                    <div class="form-actions">
+                        <button id="submit-button" type="submit">post entry</button>
+                        <button id="cancel-edit" type="button" hidden>cancel edit</button>
+                    </div>
+                </form>
+                <p id="form-message" role="status" aria-live="polite"></p>
+            </section>
+
+            <section aria-labelledby="entries-heading">
+                <h2 id="entries-heading">all entries</h2>
+                <div id="entries-list" aria-live="polite"></div>
+            </section>
+        </main>
+
+    <script src="site-nav.js" defer></script>
+        <script src="entries.js" defer></script>
+    </body>
+</html>

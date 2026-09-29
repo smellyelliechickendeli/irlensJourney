@@ -1,0 +1,107 @@
+body {
+    font-family: 'google sans';
+    line-height: 1.5;
+    margin: 2rem auto;
+    max-width: 48rem;
+    padding: 0 1rem;
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-toggle {
+    background: white;
+    border: 1px solid #777;
+    cursor: pointer;
+    left: 1rem;
+    padding: 0.4rem 0.7rem;
+    position: fixed;
+    top: 1rem;
+    z-index: 1001;
+}
+
+.site-nav {
+    align-items: flex-start;
+    background: white;
+    border-right: 1px solid #999;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100vh;
+    left: 0;
+    padding: 5rem 1.5rem 1.5rem;
+    position: fixed;
+    top: 0;
+    width: min(16rem, 85vw);
+    z-index: 1000;
+}
+
+.site-nav[hidden] {
+    display: none;
+}
+
+main {
+    display: grid;
+    gap: 2rem;
+}
+
+.entry-toggle-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.entry-editor[hidden] {
+    display: none;
+}
+
+form {
+    display: grid;
+    gap: 0.5rem;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+    text-transform: lowercase;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form-actions,
+.entry-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.entry {
+    border-bottom: 1px solid #bbb;
+    padding: 1rem 0;
+}
+
+.entry h3 {
+    margin-bottom: 0.25rem;
+}
+
+.entry-date {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.entry-content {
+    white-space: pre-wrap;
+}
